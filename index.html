@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://www.figma.com/file/PqXoMLCGlZMM2YDey1pvD3/Free-Icon-Pack-820%2Bicons-(Community)?node-id=2%3A27"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- creating header contains photo  -->
+    <header>
+      <svg
+        class="head"
+        width="375"
+        height="83"
+        viewBox="0 0 375 83"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 46.9L12.5 53.8253C25 60.6469 50 74.6531 75 78.7253C100 82.9531 125 77.2469 150 73.1747C175 68.9469 200 66.3531 225 69.0247C250 71.8 275 80.1 300 75.95C325 71.8 350 55.2 362.5 46.9L375 38.6V22H362.5C350 22 325 22 300 22C275 22 250 22 225 22C200 22 175 22 150 22C125 22 100 22 75 22C50 22 25 22 12.5 22H0V46.9Z"
+          fill="#FEB360"
+        />
+        <path
+          d="M0 38.9L12.5 45.8253C25 52.6469 50 66.6531 75 70.7253C100 74.9531 125 69.2469 150 65.1747C175 60.9469 200 58.3531 225 61.0247C250 63.8 275 72.1 300 67.95C325 63.8 350 47.2 362.5 38.9L375 30.6V14H362.5C350 14 325 14 300 14C275 14 250 14 225 14C200 14 175 14 150 14C125 14 100 14 75 14C50 14 25 14 12.5 14H0V38.9Z"
+          fill="#191C32"
+        />
+        <path
+          d="M0 24.9L12.5 31.8253C25 38.6469 50 52.6531 75 56.7253C100 60.9531 125 55.2469 150 51.1747C175 46.9469 200 44.3531 225 47.0247C250 49.8 275 58.1 300 53.95C325 49.8 350 33.2 362.5 24.9L375 16.6V0H362.5C350 0 325 0 300 0C275 0 250 0 225 0C200 0 175 0 150 0C125 0 100 0 75 0C50 0 25 0 12.5 0H0V24.9Z"
+          fill="#191C32"
+        />
+      </svg>
+    </header>
+<!-- creating box of game  -->
+    <main>
+      <div class="borderLine"></div>
+
+      <div class="data">
+        <div class="gameAndRound">
+          <p class="games">Games</p>
+          <p class="round">Round</p>
+        </div>
+        <div class="noOfGameAndRound">
+          <p id="games">0</p>
+          <p id="rounds">0</p>
+        </div>
+      </div>
+      <p class="winner" id="winner">winer</p>
+
+      <div class="boxGameParent">
+        <div
+          class="squareDiv cell1"
+          data-cell-index="0"
+          onclick="square(this)"
+        ></div>
+        <div
+          class="squareDiv cell2"
+          data-cell-index="1"
+          onclick="square(this)"
+        ></div>
+        <div
+          class="squareDiv cell3"
+          data-cell-index="2"
+          onclick="square(this)"
+        ></div>
+        <div
+          class="squareDiv cell4"
+          data-cell-index="3"
+          onclick="square(this)"
+        ></div>
+        <div
+          class="squareDiv cell5"
+          data-cell-index="4"
+          onclick="square(this)"
+        ></div>
+        <div
+          class="squareDiv cell6"
+          data-cell-index="5"
+          onclick="square(this)"
+        ></div>
+        <div
+          class="squareDiv cell7"
+          data-cell-index="6"
+          onclick="square(this)"
+        ></div>
+        <div
+          class="squareDiv cell8"
+          data-cell-index="7"
+          onclick="square(this)"
+        ></div>
+        <div
+          class="squareDiv cell9"
+          data-cell-index="8"
+          onclick="square(this)"
+        ></div>
+      </div>
+    </main>
+    <div class="dataOfPlyrs">
+      <section class="names">
+        <p id="nameOfPlayer1">Player1</p>
+        <p id="nameOfPlayer2">Player2</p>
+      </section>
+      <section class="plyrs">
+        <p id="score1">0</p>
+        <p id="score2">0</p>
+      </section>
+    </div>
+    <!-- making setting icon -->
+    <div class="settingDiv" id="settingDiv"></div>
+    <!-- making game table -->
+    <div class="gameTable" id="gameTable">
+      <p>Games Table</p>
+      <svg
+        id="plus"
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.9706 6.97058L12.9706 18.9706"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <path
+          d="M18.9706 12.9706L6.97055 12.9706"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
+    <!-- game table result -->
+    <div class="gmresult" id="gmresult">
+      <div class="subsign">
+        <p>Games Table</p>
+        <svg
+          id="sub"
+          width="25"
+          height="25"
+          viewBox="0 0 25 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.9706 12.9706L6.97055 12.9706"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <div class="gmGame">
+        <p>Game <span id="noOfGame">1</span></p>
+        <p><span id="wins">P1</span></p>
+      </div>
+
+      <div class="gmplayers">
+        <span>Gamers</span> <span id="whoGame">P1&P2</span>
+      </div>
+      <div class="roudAndWinners">
+        <div class="NoOfRounds">
+          <p>Round</p>
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+        </div>
+        <div class="nameOfWinners">
+          <p>Winner</p>
+          <p id="winner1">p1</p>
+          <p id="winner2">p2</p>
+          <p id="winner3">p1</p>
+        </div>
+      </div>
+    </div>
+    <!-- restart button  -->
+    <div class="restart" id="res">
+      <p>Restart Game</p>
+    </div>
+
+    <script src="./toe.js"></script>
+  </body>
+</html>
