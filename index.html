@@ -194,6 +194,90 @@
     <div class="restart" id="res">
       <p>Restart Game</p>
     </div>
+        <!-- bob of setting -->
+
+        <section class="backGround" id="Pop">
+          <section class="bob">
+            <!-- choosing player either computer or person  -->
+            <div class="choosePlayer">
+              <p>Choose Your opponent</p>
+    
+              <div class="choicesOfOppent">
+                <input
+                  id="computerDiv"
+                  type="radio"
+                  class="computerDiv"
+                  name="CP"
+                  value="computer"
+                  checked
+                />
+                <input
+                  id="personDiv"
+                  type="radio"
+                  class="personDiv"
+                  name="CP"
+                  value="person"
+                />
+              </div>
+            </div>
+    
+            <!-- changing of players names  -->
+            <div class="plyrsNamesDiv">
+              <div class="youDiv">
+                <p class="clr">You</p>
+                <p id="p1">p1</p>
+                <input type="text" id="firstPlayer" />
+                <p id="edit1" class="clr">Edit</p>
+              </div>
+              <div class="OtherDiv">
+                <p class="clr">Other</p>
+                <p id="p2">p2</p>
+                <input type="text" id="secondPlayer" />
+                <p id="edit2" class="clr">Edit</p>
+              </div>
+            </div>
+    
+            <!-- choose sign X OR O  -->
+            <div class="signDiv">
+              <p class="clr">Choose Your Sign</p>
+              <input id="ODiv" class="ODiv" type="radio" name="XO" value="O" />
+              <input
+                id="XDiv"
+                class="XDiv"
+                type="radio"
+                name="XO"
+                value="X"
+                checked
+              />
+            </div>
+    
+            <!-- choosing who will start the game  -->
+            <div class="whoStart">
+              <p class="clr">Who's Will Start!</p>
+              <input
+                id="plyr1"
+                type="radio"
+                class="plyr1"
+                name="plyrs"
+                value="p1"
+                checked
+              />
+              <input
+                id="plyr2"
+                type="radio"
+                class="plyr2"
+                name="plyrs"
+                value="p2"
+              />
+            </div>
+    
+            <!-- make reset and start buttons -->
+            <div class="reStart">
+              <div id="reset" class="reset"><p>Reset</p></div>
+              <div id="start" class="start"><p>Start</p></div>
+            </div>
+          </section>
+        </section>
 
     <script src="./toe.js"></script>
   </body>
