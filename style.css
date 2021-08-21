@@ -241,5 +241,260 @@ main {
   margin-top: -20px;
   border: 1px solid;
 }
+/* bob of .setting */
+.backGround {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  animation: popup 0.7s;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bob {
+  height: 500px;
+  width: 320px;
+  background-color: #191c32;
+  border-radius: 20px;
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  color: #ffffff;
+  font-size: 25px;
+}
+/* choosing player as person or .computer */
+.choosePlayer {
+  text-align: center;
+  margin-top: 25px;
+}
+.choicesOfOppent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 140px;
+  margin-left: 90px;
+}
+.computerDiv {
+  position: relative;
+  border: 1px solid #ffffff;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-right: 25px;
+  text-align: center;
+  appearance: none;
+  z-index: 1;
+}
+input[name="CP"]:checked,
+input[name="XO"]:checked,
+input[name="plyrs"]:checked {
+  background-color: #feb360;
+  border: none;
+}
+.computerDiv::after {
+  content: "";
+  position: absolute;
+  background-image: url(./assets/desktop.svg);
+  z-index: 5;
+  height: 24px;
+  width: 24px;
+  background-repeat: no-repeat;
+}
+
+.personDiv {
+  position: relative;
+  border: 1px solid #ffffff;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-right: 25px;
+  text-align: center;
+  appearance: none;
+  z-index: 1;
+}
+
+.personDiv::after {
+  content: "";
+  position: absolute;
+  background-image: url(./assets/User.svg);
+  z-index: 5;
+  height: 24px;
+  width: 24px;
+  background-repeat: no-repeat;
+}
+
+/* name of players */
+.plyrsNamesDiv {
+  /* background-color: blueviolet; */
+  margin-top: 10px;
+  font-size: 23px;
+}
+#p1,
+#p2 {
+  display: block;
+}
+#firstPlayer,
+#secondPlayer {
+  font-size: 20px;
+  display: none;
+}
+
+.youDiv {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+.OtherDiv {
+  display: flex;
+  justify-content: space-around;
+}
+.clr {
+  color: #bbbbbb;
+}
+/* chooing sign */
+.signDiv {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.ODiv {
+  position: relative;
+  border: 1px solid #ffffff;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  padding-top: 15px;
+  padding-right: 22px;
+  text-align: center;
+  appearance: none;
+  z-index: 1;
+}
+.ODiv::after {
+  content: "";
+  position: absolute;
+  background-image: url(./assets/Ellipse\ 52.svg);
+  z-index: 5;
+  height: 24px;
+  width: 24px;
+  background-repeat: no-repeat;
+}
+
+.XDiv {
+  position: relative;
+  border: 1px solid #ffffff;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  padding-top: 3px;
+  padding-right: 40px;
+  text-align: center;
+  appearance: none;
+  z-index: 1;
+}
+.XDiv::after {
+  content: "";
+  position: absolute;
+  background-image: url(./assets/Add_round.svg);
+  z-index: 5;
+  height: 35px;
+  width: 35px;
+  background-repeat: no-repeat;
+}
+/* chosing who will start the game  */
+.whoStart {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.plyr1 {
+  position: relative;
+  border: 1px solid #ffffff;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  padding-top: 8px;
+  padding-right: 20px;
+  text-align: center;
+  appearance: none;
+  z-index: 1;
+}
+.plyr1::after {
+  font-size: 25px;
+  content: "P1";
+  color: #ffffff;
+  position: absolute;
+  z-index: 5;
+}
+.plyr2 {
+  position: relative;
+  border: 1px solid #ffffff;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  padding-top: 8px;
+  padding-right: 20px;
+  text-align: center;
+  appearance: none;
+  z-index: 1;
+}
+.plyr2::after {
+  font-size: 25px;
+  content: "P2";
+  color: #ffffff;
+  position: absolute;
+  z-index: 5;
+}
+/* <!-- make  style os reset and start buttons --> */
+.reStart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 35px;
+  width: 230px;
+  margin-left: 40px;
+}
+.reset {
+  height: 50px;
+  width: 100px;
+  border: 1px solid #feb360;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 5px;
+}
+.start {
+  height: 50px;
+  width: 100px;
+  border: 1px solid #feb360;
+  background-color: #feb360;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 5px;
+}
 
 
