@@ -21,7 +21,6 @@
   </head>
 
   <body>
-    <!-- creating header contains photo  -->
     <header>
       <svg
         class="head"
@@ -45,7 +44,7 @@
         />
       </svg>
     </header>
-<!-- creating box of game  -->
+
     <main>
       <div class="borderLine"></div>
 
@@ -65,47 +64,47 @@
         <div
           class="squareDiv cell1"
           data-cell-index="0"
-          onclick="square(this)"
+          onclick="creatingSins(this)"
         ></div>
         <div
           class="squareDiv cell2"
           data-cell-index="1"
-          onclick="square(this)"
+          onclick="creatingSins(this)"
         ></div>
         <div
           class="squareDiv cell3"
           data-cell-index="2"
-          onclick="square(this)"
+          onclick="creatingSins(this)"
         ></div>
         <div
           class="squareDiv cell4"
           data-cell-index="3"
-          onclick="square(this)"
+          onclick="creatingSins(this)"
         ></div>
         <div
           class="squareDiv cell5"
           data-cell-index="4"
-          onclick="square(this)"
+          onclick="creatingSins(this)"
         ></div>
         <div
           class="squareDiv cell6"
           data-cell-index="5"
-          onclick="square(this)"
+          onclick="creatingSins(this)"
         ></div>
         <div
           class="squareDiv cell7"
           data-cell-index="6"
-          onclick="square(this)"
+          onclick="creatingSins(this)"
         ></div>
         <div
           class="squareDiv cell8"
           data-cell-index="7"
-          onclick="square(this)"
+          onclick="creatingSins(this)"
         ></div>
         <div
           class="squareDiv cell9"
           data-cell-index="8"
-          onclick="square(this)"
+          onclick="creatingSins(this)"
         ></div>
       </div>
     </main>
@@ -168,8 +167,8 @@
       </div>
 
       <div class="gmGame">
-        <p>Game <span id="noOfGame">1</span></p>
-        <p><span id="wins">P1</span></p>
+        <p>Game <span id="noOfGame">0</span></p>
+        <p id="wins"></p>
       </div>
 
       <div class="gmplayers">
@@ -184,9 +183,9 @@
         </div>
         <div class="nameOfWinners">
           <p>Winner</p>
-          <p id="winner1">p1</p>
-          <p id="winner2">p2</p>
-          <p id="winner3">p1</p>
+          <p id="winner1"></p>
+          <p id="winner2"></p>
+          <p id="winner3"></p>
         </div>
       </div>
     </div>
@@ -194,90 +193,107 @@
     <div class="restart" id="res">
       <p>Restart Game</p>
     </div>
-        <!-- bob of setting -->
+    <!-- bob of setting -->
 
-        <section class="backGround" id="Pop">
-          <section class="bob">
-            <!-- choosing player either computer or person  -->
-            <div class="choosePlayer">
-              <p>Choose Your opponent</p>
-    
-              <div class="choicesOfOppent">
-                <input
-                  id="computerDiv"
-                  type="radio"
-                  class="computerDiv"
-                  name="CP"
-                  value="computer"
-                  checked
-                />
-                <input
-                  id="personDiv"
-                  type="radio"
-                  class="personDiv"
-                  name="CP"
-                  value="person"
-                />
-              </div>
-            </div>
-    
-            <!-- changing of players names  -->
-            <div class="plyrsNamesDiv">
-              <div class="youDiv">
-                <p class="clr">You</p>
-                <p id="p1">p1</p>
-                <input type="text" id="firstPlayer" />
-                <p id="edit1" class="clr">Edit</p>
-              </div>
-              <div class="OtherDiv">
-                <p class="clr">Other</p>
-                <p id="p2">p2</p>
-                <input type="text" id="secondPlayer" />
-                <p id="edit2" class="clr">Edit</p>
-              </div>
-            </div>
-    
-            <!-- choose sign X OR O  -->
-            <div class="signDiv">
-              <p class="clr">Choose Your Sign</p>
-              <input id="ODiv" class="ODiv" type="radio" name="XO" value="O" />
-              <input
-                id="XDiv"
-                class="XDiv"
-                type="radio"
-                name="XO"
-                value="X"
-                checked
-              />
-            </div>
-    
-            <!-- choosing who will start the game  -->
-            <div class="whoStart">
-              <p class="clr">Who's Will Start!</p>
-              <input
-                id="plyr1"
-                type="radio"
-                class="plyr1"
-                name="plyrs"
-                value="p1"
-                checked
-              />
-              <input
-                id="plyr2"
-                type="radio"
-                class="plyr2"
-                name="plyrs"
-                value="p2"
-              />
-            </div>
-    
-            <!-- make reset and start buttons -->
-            <div class="reStart">
-              <div id="reset" class="reset"><p>Reset</p></div>
-              <div id="start" class="start"><p>Start</p></div>
-            </div>
-          </section>
-        </section>
+    <section class="backGround" id="Pop">
+      <section class="bob">
+        <!-- choosing player either computer or person  -->
+        <div class="choosePlayer">
+          <p>Choose Your opponent</p>
+
+          <div class="choicesOfOppent">
+            <input
+              id="computerDiv"
+              type="radio"
+              class="computerDiv"
+              name="CP"
+              value="computer"
+              checked
+            />
+            <input
+              id="personDiv"
+              type="radio"
+              class="personDiv"
+              name="CP"
+              value="person"
+            />
+          </div>
+        </div>
+
+        <!-- changing of players names  -->
+        <div class="plyrsNamesDiv">
+          <div class="youDiv">
+            <p class="clr">You</p>
+            <p id="p1">p1</p>
+            <input type="text" id="firstPlayer" />
+            <p id="edit1" class="clr">Edit</p>
+          </div>
+          <div class="OtherDiv">
+            <p class="clr">Other</p>
+            <p id="p2">p2</p>
+            <input type="text" id="secondPlayer" />
+            <p id="edit2" class="clr">Edit</p>
+          </div>
+        </div>
+
+        <!-- choose sign X OR O  -->
+        <div class="signDiv">
+          <p class="clr">Choose Your Sign</p>
+          <input id="ODiv" class="ODiv" type="radio" name="XO" value="O" />
+          <input
+            id="XDiv"
+            class="XDiv"
+            type="radio"
+            name="XO"
+            value="X"
+            checked
+          />
+        </div>
+
+        <!-- choosing who will start the game  -->
+        <div class="whoStart">
+          <p class="clr">Who's Will Start!</p>
+          <div class="choosePl">
+            <input  id="plyr1"
+            type="radio"
+            class="plyr1"
+            name="plyrs"
+            value="p1"
+            checked
+          />
+          <span id="pl1">P1</span>
+          </div>
+          
+  
+          <div class="choosePl">
+            <input  id="plyr2"
+            type="radio"
+            class="plyr2"
+            name="plyrs"
+            value="p2"
+            checked
+          />
+          <span id="pl2">P2</span>
+          </div>
+
+        <!-- make reset and start buttons -->
+        <div class="reStart">
+          <div id="reset" class="reset"><p>Reset</p></div>
+          <div id="start" class="start"><p>Start</p></div>
+        </div>
+      </section>
+    </section>
+<!-- making animation for winning -->
+<div class="congrats">
+    <div class="js-container container" style="top:0px !important;"></div>
+
+  <div style="text-align:center;margin-top:30px;position:  fixed;width:100%;height:100%;top:0px;left:0px;">
+    <div class="checkmark-circle">
+      <div class="background"></div>
+      <div class="checkmark draw"></div>
+    </div>
+</div>
+
 
     <script src="./toe.js"></script>
   </body>

@@ -9,12 +9,14 @@ body,
 html {
   width: 100%;
   height: 100%;
-  z-index: 0;
+ z-index: 10;
   position: relative;
+
 }
-/* styling of header  */
+
 header {
   position: relative;
+  /* z-index: 1000; */
 }
 
 header::after {
@@ -26,6 +28,7 @@ header::after {
   font-size: 40px;
   font-weight: 400;
   position: absolute;
+  /* z-index: 1000; */
 }
 
 .borderLine {
@@ -37,6 +40,7 @@ header::after {
   height: 500px;
   width: 320px;
   border-radius: 20px;
+
 }
 
 @keyframes borderLine {
@@ -47,7 +51,7 @@ header::after {
     opacity: 1;
   }
 }
-/* styling of box of game  */
+
 .boxGameParent {
   left: 37px;
   top: 25px;
@@ -95,6 +99,7 @@ header::after {
 main {
   width: 375px;
   height: 50%;
+  
 }
 
 .squareDiv {
@@ -102,6 +107,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* z-index: 1000; */
 }
 .imgs {
   height: 70px;
@@ -133,11 +139,13 @@ main {
   justify-content: space-around;
   color: #757575;
   font-size: 25px;
+  z-index: 1000;
 }
 
 .noOfGameAndRound {
   display: flex;
   justify-content: space-around;
+  /* z-index: 1000; */
 }
 .winner {
   text-align: center;
@@ -155,8 +163,9 @@ main {
 }
 .dataOfPlyrs {
   margin-top: 20px;
+  width: 298px;
+  margin-left: 40px;
 }
-/* styling of setting icon */
 .settingDiv {
   position: relative;
   background-color: #feb360;
@@ -169,18 +178,19 @@ main {
   right: 0;
   padding-top: 5px;
   padding-left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .settingDiv::after {
   content: "";
   background-image: url(./assets/Setting_line.svg);
   position: absolute;
   z-index: 5;
-
   height: 40px;
   width: 40px;
   background-repeat: no-repeat;
 }
-/* styling of game table  */
+
 .gameTable {
   height: 60px;
   width: 300px;
@@ -194,30 +204,38 @@ main {
   margin: 45px auto;
   justify-content: space-between;
 }
-.subsign{
-
+.subsign {
   display: flex;
   justify-content: space-between;
 }
-.gmGame, .gmplayers{
+.gmGame,
+.gmplayers {
   display: flex;
   justify-content: space-evenly;
   margin-top: 10px;
 }
-.NoOfRounds ,.nameOfWinners{
+.NoOfRounds {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
- 
- margin-left: 48px;
+
+  margin-left: 48px;
   padding-top: 10px;
 }
-.roudAndWinners{
-  display: flex;
- margin-left: 20px;
+.nameOfWinners {
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  margin-left: 48px;
+  padding-top: 10px;
 }
 
-.gmresult{
+.roudAndWinners {
+  display: flex;
+  margin-left: 20px;
+}
+
+.gmresult {
   display: none;
   height: 450px;
   width: 300px;
@@ -226,13 +244,13 @@ main {
   color: #ffffff;
   font-size: 25px;
   padding: 10px 16px;
-   margin: 45px auto; 
-
+  margin: 45px auto;
 }
-/* styling restart button  */
+
 .restart {
   height: 60px;
   width: 150px;
+
   text-align: center;
   border-radius: 10px;
   padding-top: 10px;
@@ -285,6 +303,7 @@ main {
   left: 30px;
   color: #ffffff;
   font-size: 25px;
+
 }
 /* choosing player as person or .computer */
 .choosePlayer {
@@ -429,14 +448,15 @@ input[name="plyrs"]:checked {
 /* chosing who will start the game  */
 .whoStart {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 30px;
 }
 .plyr1 {
   position: relative;
   border: 1px solid #ffffff;
-  height: 50px;
-  width: 50px;
+  height: 100%;
+  width: 100%;
   border-radius: 15px;
   padding-top: 8px;
   padding-right: 20px;
@@ -444,18 +464,24 @@ input[name="plyrs"]:checked {
   appearance: none;
   z-index: 1;
 }
-.plyr1::after {
-  font-size: 25px;
-  content: "P1";
-  color: #ffffff;
+.choosePl {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+#pl1,
+#pl2 {
   position: absolute;
+  top: 50%;
+  left: 50%;
   z-index: 5;
+  transform: translate(-50%, -50%);
 }
 .plyr2 {
   position: relative;
   border: 1px solid #ffffff;
-  height: 50px;
-  width: 50px;
+  height: 100%;
+  width: 100%;
   border-radius: 15px;
   padding-top: 8px;
   padding-right: 20px;
@@ -463,13 +489,7 @@ input[name="plyrs"]:checked {
   appearance: none;
   z-index: 1;
 }
-.plyr2::after {
-  font-size: 25px;
-  content: "P2";
-  color: #ffffff;
-  position: absolute;
-  z-index: 5;
-}
+
 /* <!-- make  style os reset and start buttons --> */
 .reStart {
   display: flex;
@@ -496,5 +516,111 @@ input[name="plyrs"]:checked {
   text-align: center;
   padding-top: 5px;
 }
+/* make responsive for desktop */
+@media screen and (min-width: 1200px) {
+  .bob {
+    top: 30px;
+  }
+  header {
+    text-align: center;
+  }
+
+  .borderLine,
+  .boxGameParent,
+  .bob {
+    margin-left: 420px;
+  }
+  .boxGameParent {
+    top: 5px;
+  }
+  .winner,
+  .data {
+    margin-left: 460px;
+  }
+
+  .data,
+  .winner {
+    width: 300px;
+  }
+  .winner {
+    margin-left: 460px;
+  }
+  .gameTable {
+    margin-top: 150px;
+  }
+  .dataOfPlyrs {
+    margin-left: 450px;
+    margin-top: 150px;
+  }
+  .settingDiv {
+  }
+}
+/* making animation for winnig  */
+
+@keyframes confetti-slow {
+    0% {
+      transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+    }
+    100% {
+      transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg);
+    }
+  }
+  @keyframes confetti-medium {
+    0% {
+      transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+    }
+    100% {
+      transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg);
+    }
+  }
+  @keyframes confetti-fast {
+    0% {
+      transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+    }
+    100% {
+      transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg);
+    }
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    /* background: #ffffff; */
+    border: 1px solid white;
+    display: fixed;
 
 
+  }
+  
+  .confetti-container {
+    perspective: 700px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .confetti {
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    border-radius: 0%;
+  }
+  .confetti--animation-slow {
+    animation: confetti-slow 2.25s linear 1 forwards;
+  }
+  .confetti--animation-medium {
+    animation: confetti-medium 1.75s linear 1 forwards;
+  }
+  .confetti--animation-fast {
+    animation: confetti-fast 1.25s linear 1 forwards;
+  }
+.congrats{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
